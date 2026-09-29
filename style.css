@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #e9edf3;
+    color: #29364d;
+    line-height: 1.6;
+}
+
+/* KERTAS CV */
+.cv {
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    padding: 45px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* BAGIAN ATAS */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 45px;
+}
+
+.foto {
+    width: 220px;
+    height: 220px;
+    border: 3px solid #20345b;
+    border-radius: 50%;
+    padding: 8px;
+    flex-shrink: 0;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.nama h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #20345b;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.nama p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* DUA KOLOM */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+}
+
+/* JUDUL BAGIAN */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #20345b;
+    border-bottom: 2px solid #7b8494;
+    padding-bottom: 8px;
+    margin: 0 0 18px;
+}
+
+section p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 8px 0;
+}
+
+/* DAFTAR KEAHLIAN DAN MINAT */
+ul {
+    padding-left: 22px;
+    margin: 0;
+}
+
+li {
+    font-size: 14px;
+    padding-left: 3px;
+}
+
+/* GARIS PENGALAMAN */
+.timeline {
+    border-left: 2px solid #7b8494;
+    margin-left: 8px;
+    padding-left: 20px;
+}
+
+.item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background-color: #20345b;
+    border-radius: 50%;
+}
+
+.item h3 {
+    font-size: 15px;
+    margin: 0;
+    color: #20345b;
+}
+
+.item p {
+    margin: 3px 0;
+}
+
+.item span {
+    font-size: 13px;
+    color: #666;
+}
+
+/* BAGIAN BAWAH */
+footer {
+    border-top: 2px solid #20345b;
+    margin-top: 30px;
+    padding-top: 10px;
+    text-align: center;
+    color: #20345b;
+    font-size: 13px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 650px) {
+    body {
+        padding: 10px;
+    }
+
+    .cv {
+        padding: 25px 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .foto {
+        width: 170px;
+        height: 170px;
+    }
+
+    .nama h1 {
+        font-size: 27px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
