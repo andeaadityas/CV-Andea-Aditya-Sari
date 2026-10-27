@@ -3,15 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CV Andea Aditya Sari</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- CSS CV Lama -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Penyesuaian agar Bootstrap cocok dengan desain CV -->
+    <style>
+        .accordion-header {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .accordion-button {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            color: #29364d;
+        }
+
+        .accordion-body {
+            font-size: 14px;
+            color: #29364d;
+        }
+
+        .card {
+            border-radius: 12px;
+            border-color: #dce2ec;
+        }
+
+        .card-title {
+            color: #20345b;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 14px;
+        }
+
+        .galeri-slide {
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .galeri-slide h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .galeri-slide p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #20345b;
+            border-radius: 50%;
+            padding: 18px;
+            background-size: 55%;
+        }
+
+        @media (max-width: 650px) {
+            .galeri-slide {
+                min-height: 200px;
+                padding: 35px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="cv">
 
+        <!-- HEADER CV -->
         <header class="header">
+
             <div class="foto">
                 <img src="foto-andea.jpeg" alt="Foto Andea">
             </div>
@@ -21,12 +104,15 @@
                 <p>Mahasiswa Teknologi Rekayasa Perangkat Lunak</p>
                 <p>Politeknik Manahijul Huda</p>
             </div>
+
         </header>
 
         <main class="content">
 
+            <!-- KOLOM KIRI -->
             <div class="kolom">
 
+                <!-- PROFIL -->
                 <section>
                     <h2>Profil</h2>
                     <p>
@@ -37,6 +123,7 @@
                     </p>
                 </section>
 
+                <!-- DATA PRIBADI -->
                 <section>
                     <h2>Data Pribadi</h2>
                     <p>
@@ -45,17 +132,72 @@
                     </p>
                 </section>
 
+                <!-- KOMPONEN BOOTSTRAP 1: CARD -->
                 <section>
                     <h2>Keahlian</h2>
-                    <ul>
-                        <li>Fotografi dan videografi</li>
-                        <li>Dokumentasi kegiatan</li>
-                        <li>Menerima pendapat dalam diskusi</li>
-                        <li>Menulis</li>
-                        <li>Kerja sama tim</li>
-                    </ul>
+
+                    <div class="row g-3">
+
+                        <div class="col-12">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        Fotografi dan Videografi
+                                    </h3>
+                                    <p class="card-text mb-0">
+                                        Memiliki minat dalam mengambil foto,
+                                        merekam video, dan membuat dokumentasi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        Dokumentasi Kegiatan
+                                    </h3>
+                                    <p class="card-text mb-0">
+                                        Memiliki pengalaman dalam dokumentasi
+                                        kegiatan dan pengelolaan media.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        Komunikasi dan Kerja Sama
+                                    </h3>
+                                    <p class="card-text mb-0">
+                                        Mampu bekerja sama dalam tim,
+                                        berdiskusi, dan menerima pendapat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        Menulis
+                                    </h3>
+                                    <p class="card-text mb-0">
+                                        Memiliki minat dalam menulis
+                                        dan menyampaikan informasi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </section>
 
+                <!-- MINAT -->
                 <section>
                     <h2>Minat</h2>
                     <ul>
@@ -67,37 +209,108 @@
 
             </div>
 
+            <!-- KOLOM KANAN -->
             <div class="kolom">
+
+                <!-- KOMPONEN BOOTSTRAP 2: ACCORDION -->
                 <section>
-    <h2>Pendidikan</h2>
-    <div class="timeline">
+                    <h2>Pendidikan</h2>
 
-        <div class="item">
-            <h3>SDN Sukaluyu 1</h3>
-            <p>2013 - 2019</p>
-        </div>
+                    <div class="accordion" id="accordionPendidikan">
 
-        <div class="item">
-            <h3>SMPN Sukaluyu 1</h3>
-            <p>2019 - 2022</p>
-        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#pendidikanSD"
+                                        aria-expanded="true"
+                                        aria-controls="pendidikanSD">
+                                    SDN Sukaluyu 1
+                                </button>
+                            </h3>
 
-        <div class="item">
-            <h3>SMAT Manahijul Huda</h3>
-            <p>2022 - 2025</p>
-        </div>
+                            <div id="pendidikanSD"
+                                 class="accordion-collapse collapse show"
+                                 data-bs-parent="#accordionPendidikan">
+                                <div class="accordion-body">
+                                    Tahun 2013–2019
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="item">
-            <h3>Politeknik Manahijul Huda</h3>
-            <p>Teknologi Rekayasa Perangkat Lunak (TRPL)</p>
-            <span>2025 - Sekarang</span>
-        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#pendidikanSMP"
+                                        aria-expanded="false"
+                                        aria-controls="pendidikanSMP">
+                                    SMPN Sukaluyu 1
+                                </button>
+                            </h3>
 
-    </div>
-</section>
+                            <div id="pendidikanSMP"
+                                 class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionPendidikan">
+                                <div class="accordion-body">
+                                    Tahun 2019–2022
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#pendidikanSMA"
+                                        aria-expanded="false"
+                                        aria-controls="pendidikanSMA">
+                                    SMAT Manahijul Huda
+                                </button>
+                            </h3>
+
+                            <div id="pendidikanSMA"
+                                 class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionPendidikan">
+                                <div class="accordion-body">
+                                    Tahun 2022–2025
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#pendidikanKuliah"
+                                        aria-expanded="false"
+                                        aria-controls="pendidikanKuliah">
+                                    Politeknik Manahijul Huda
+                                </button>
+                            </h3>
+
+                            <div id="pendidikanKuliah"
+                                 class="accordion-collapse collapse"
+                                 data-bs-parent="#accordionPendidikan">
+                                <div class="accordion-body">
+                                    Program Studi Teknologi Rekayasa
+                                    Perangkat Lunak (TRPL).<br>
+                                    Tahun 2025–sekarang.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- PENGALAMAN -->
                 <section>
                     <h2>Pengalaman</h2>
+
                     <div class="timeline">
 
                         <div class="item">
@@ -109,8 +322,9 @@
                             <h3>BAAK</h3>
                             <p>
                                 Biro Administrasi Akademik dan Keuangan
-                                Politeknik Manahijul Huda
+                                Politeknik Manahijul Huda.
                             </p>
+                        </div>
 
                         <div class="item">
                             <h3>Media Prodi TRPL</h3>
@@ -120,6 +334,7 @@
                     </div>
                 </section>
 
+                <!-- TENTANG SAYA -->
                 <section>
                     <h2>Tentang Saya</h2>
                     <p>
@@ -131,16 +346,20 @@
                     </p>
                 </section>
 
+                <!-- KONTAK -->
                 <section>
                     <h2>Kontak</h2>
+
                     <p>
                         <strong>Email:</strong><br>
                         andeaadityas@gmail.com
                     </p>
+
                     <p>
                         <strong>WhatsApp:</strong><br>
                         081914939169
                     </p>
+
                     <p>
                         <strong>Instagram:</strong><br>
                         @andeaaditysrii
@@ -148,13 +367,85 @@
                 </section>
 
             </div>
+
         </main>
 
+        <!-- KOMPONEN BOOTSTRAP 3: CAROUSEL -->
+        <section class="mt-5 mb-4">
+            <h2>Galeri dan Minat</h2>
+
+            <div id="galeriAndea"
+                 class="carousel slide"
+                 data-bs-ride="false">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="galeri-slide"
+                             style="background-color: #20345b;">
+                            <h3>Fotografi</h3>
+                            <p>
+                                Mengabadikan momen dan melihat cerita
+                                melalui sebuah foto.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="galeri-slide"
+                             style="background-color: #426b83;">
+                            <h3>Videografi</h3>
+                            <p>
+                                Merekam momen dan membuat dokumentasi
+                                kegiatan yang menarik.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="galeri-slide"
+                             style="background-color: #537568;">
+                            <h3>Belajar Hal Baru</h3>
+                            <p>
+                                Terus belajar dan mengembangkan kemampuan
+                                di bidang teknologi.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#galeriAndea"
+                        data-bs-slide="prev"
+                        aria-label="Slide sebelumnya">
+                    <span class="carousel-control-prev-icon"
+                          aria-hidden="true"></span>
+                </button>
+
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#galeriAndea"
+                        data-bs-slide="next"
+                        aria-label="Slide berikutnya">
+                    <span class="carousel-control-next-icon"
+                          aria-hidden="true"></span>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
         <footer>
             <p>CV Andea Aditya Sari</p>
+            <p>Tetap belajar, berkembang, dan berkarya.</p>
         </footer>
 
     </div>
+
+    <!-- Bootstrap JavaScript agar Accordion dan Carousel berfungsi -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
