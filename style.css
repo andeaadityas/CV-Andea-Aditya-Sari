@@ -170,3 +170,81 @@ footer {
         gap: 0;
     }
 }
+
+body {
+    background-color: #eef2f7;
+    font-family: 'Segoe UI', sans-serif;
+    color: #26354d;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #20345b !important;
+    padding: 15px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #b8d8ff !important;
+}
+
+/* Judul bagian CV */
+h2 {
+    color: #20345b;
+    font-weight: bold;
+    border-bottom: 2px solid #4d80b8;
+    padding-bottom: 8px;
+    margin-top: 25px;
+}
+
+/* Tabel pendidikan */
+.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Tombol */
+.btn-primary {
+    background-color: #356eaa;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #20345b;
+}
+
+/* Efek hover pada kartu */
+.card {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
