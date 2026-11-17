@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -90,6 +91,36 @@
 
 <body>
 
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">CV Andea</a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavigasi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNavigasi">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#profil">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pendidikan">Pendidikan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pengalaman">Pengalaman</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
     <div class="cv">
 
         <!-- HEADER CV -->
@@ -113,7 +144,7 @@
             <div class="kolom">
 
                 <!-- PROFIL -->
-                <section>
+                <section id="profil">
                     <h2>Profil</h2>
                     <p>
                         Saya merupakan mahasiswa semester 3 di Politeknik
@@ -124,16 +155,58 @@
                 </section>
 
                 <!-- DATA PRIBADI -->
-                <section>
+                <section id="data pribadi">
                     <h2>Data Pribadi</h2>
                     <p>
                         <strong>Nama:</strong> Andea Aditya Sari<br>
                         <strong>Status:</strong> Mahasiswa
                     </p>
-                </section>
+                </section id="riwayat pendidikan">
+                    <h2>Riwayat Pendidikan</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+
+            <thead class="table-primary">
+                <tr>
+                    <th>No</th>
+                    <th>Pendidikan</th>
+                    <th>Tahun</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>SDN Sukaluyu 1</td>
+                    <td>2013–2019</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>SMPN Sukaluyu 1</td>
+                    <td>2019–2022</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>SMAT Manahijul Huda</td>
+                    <td>2022–2025</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Politeknik Manahijul Huda</td>
+                    <td>2025–Sekarang</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</section>
 
                 <!-- KOMPONEN BOOTSTRAP 1: CARD -->
-                <section>
+                <section id="keahlian">
                     <h2>Keahlian</h2>
 
                     <div class="row g-3">
@@ -198,7 +271,7 @@
                 </section>
 
                 <!-- MINAT -->
-                <section>
+                <section id="minat">
                     <h2>Minat</h2>
                     <ul>
                         <li>Menulis</li>
@@ -213,7 +286,7 @@
             <div class="kolom">
 
                 <!-- KOMPONEN BOOTSTRAP 2: ACCORDION -->
-                <section>
+                <section id="pendidikan">
                     <h2>Pendidikan</h2>
 
                     <div class="accordion" id="accordionPendidikan">
@@ -308,7 +381,7 @@
                 </section>
 
                 <!-- PENGALAMAN -->
-                <section>
+                <section id="pengalaman">
                     <h2>Pengalaman</h2>
 
                     <div class="timeline">
@@ -335,9 +408,13 @@
                 </section>
 
                 <!-- TENTANG SAYA -->
-                <section>
+                 <button id="tombolTentang" class="btn btn-primary btn-sm">
+    Sembunyikan / Tampilkan
+                 </button>
+
+                <section id="tentang saya">
                     <h2>Tentang Saya</h2>
-                    <p>
+                    <p id="isiTentang">
                         Awalnya, saya memiliki impian untuk mempelajari
                         ilmu psikologi. Namun, saat ini saya menjalani
                         pendidikan di bidang Teknologi Rekayasa Perangkat
@@ -347,7 +424,7 @@
                 </section>
 
                 <!-- KONTAK -->
-                <section>
+                <section id="kontak">
                     <h2>Kontak</h2>
 
                     <p>
@@ -445,6 +522,18 @@
     </div>
 
     <!-- Bootstrap JavaScript agar Accordion dan Carousel berfungsi -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+$(document).ready(function(){
+
+    $("#tombolTentang").click(function(){
+
+        $("#isiTentang").fadeToggle(500);
+
+    });
+
+});
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
